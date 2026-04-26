@@ -41,7 +41,14 @@ Scraper → Data Cleaning → SQLite Database → FastAPI API
 1. Scrape raw job data  
 2. Clean and transform data  
 3. Store in SQLite database  
-4. Serve via API  
+4. Serve via API
+## 🔄 Automation
+
+The pipeline runs sequentially:
+
+python scraper.py  
+python clean.py  
+python database.py  
 
 ## ⚡ One-Command Setup
 
