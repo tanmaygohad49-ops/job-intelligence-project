@@ -5,11 +5,16 @@ This project is an end-to-end Data Engineering pipeline that collects, processes
 
 ## 🧠 Problem Statement
 Businesses need insights about job market trends such as:
-- Which skills are in demand
-- Which companies are hiring
-- Job locations and patterns
+- Which skills are in demand  
+- Which companies are hiring  
+- Job locations and patterns  
 
 This system helps extract and analyze job listings data.
+
+## 💼 Business Value
+- Helps companies track hiring trends  
+- Identifies in-demand skills  
+- Provides structured job market data for decision-making  
 
 ## 🌐 Data Source
 - RemoteOK API
@@ -26,36 +31,38 @@ Scraper → Data Cleaning → SQLite Database → FastAPI API
 - Uvicorn
 
 ## 📦 Features
-- Scrapes real job data from API
-- Cleans and processes raw data
-- Stores structured data in SQLite database
-- Provides REST API for access
+- Scrapes real job data from API  
+- Cleans and processes raw data  
+- Handles missing values and duplicates  
+- Stores structured data in SQLite database  
+- Provides REST API for access  
+
+## 🔄 Automation
+The pipeline is designed to run sequentially:
+- scraper.py → clean.py → database.py  
+This ensures updated and reliable data without manual processing.
 
 ## 🚀 How to Run
 
 ### 1. Install dependencies
 pip install requests pandas fastapi uvicorn
 
-### 2. Run scraper
-python scraper.py
+### 2. Run pipeline
+python scraper.py  
+python clean.py  
+python database.py  
 
-### 3. Clean data
-python clean.py
-
-### 4. Create database
-python database.py
-
-### 5. Run API
-uvicorn api:app --reload
+### 3. Run API
+uvicorn api:app --reload  
 
 ## 🌍 API Endpoints
-- `/` → Home
-- `/jobs` → Get all job data
+- `/` → Home  
+- `/jobs` → Get all job data  
 
 ## 📊 Output
-- Clean dataset (CSV)
-- SQLite database (jobs.db)
-- JSON API response
+- Clean dataset (CSV)  
+- SQLite database (jobs.db)  
+- JSON API response  
 
 ## 👨‍💻 Author
 Data Engineering Internship Project
