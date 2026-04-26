@@ -14,7 +14,7 @@ This system helps extract and analyze job listings data.
 ## 💼 Business Value
 - Helps companies track hiring trends  
 - Identifies in-demand skills  
-- Provides structured job market data for decision-making  
+- Provides structured job data for decision-making  
 
 ## 🌐 Data Source
 - RemoteOK API
@@ -23,12 +23,12 @@ This system helps extract and analyze job listings data.
 Scraper → Data Cleaning → SQLite Database → FastAPI API
 
 ## ⚙️ Tech Stack
-- Python
-- Requests
-- Pandas
-- SQLite
-- FastAPI
-- Uvicorn
+- Python  
+- Requests  
+- Pandas  
+- SQLite  
+- FastAPI  
+- Uvicorn  
 
 ## 📦 Features
 - Scrapes real job data from API  
@@ -37,15 +37,24 @@ Scraper → Data Cleaning → SQLite Database → FastAPI API
 - Stores structured data in SQLite database  
 - Provides REST API for access  
 
-## 🔄 Automation
-The pipeline is designed to run sequentially:
-- scraper.py → clean.py → database.py  
-This ensures updated and reliable data without manual processing.
+## 🔄 Pipeline Flow
+1. Scrape raw job data  
+2. Clean and transform data  
+3. Store in SQLite database  
+4. Serve via API  
+
+## ⚡ One-Command Setup
+
+Run the complete pipeline:
+
+python scraper.py  
+python clean.py  
+python database.py  
 
 ## 🚀 How to Run
 
 ### 1. Install dependencies
-pip install requests pandas fastapi uvicorn
+pip install requests pandas fastapi uvicorn  
 
 ### 2. Run pipeline
 python scraper.py  
@@ -61,7 +70,7 @@ uvicorn api:app --reload
 
 ## 📊 Output
 - Clean dataset (CSV)  
-- SQLite database (jobs.db)  
+- SQLite database (`jobs.db`)  
 - JSON API response  
 
 ## 👨‍💻 Author
